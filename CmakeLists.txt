@@ -1,0 +1,10 @@
+project(generate_table)
+cmake_minimum_required(VERSION 3.24)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+find_package(fmt REQUIRED)
+
+add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} fmt::fmt)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
